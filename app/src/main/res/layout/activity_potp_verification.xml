@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PSignup"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OTP verification"
+        android:textColor="@color/lightblack"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/profiler2"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="@color/lightblack"
+        android:text="Enter the Verification coder"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/lightblack"
+        android:text="We just sent on your phone number"/>
+
+    <EditText
+        android:id="@+id/otp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:hint="OTP"
+        android:gravity="center"
+        android:textColorHint="@color/verylightblack"
+        android:textStyle="bold"
+        android:textColor="@color/lightblack"
+        android:maxLength="10"
+        android:background="@color/white"/>
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="1dp"
+        android:background="@color/lightblack"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorTextSecondary"
+            android:text="If you didn't recieve a code!"/>
+        <TextView
+            android:id="@+id/textResendOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/orange"
+            android:text="Resend"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/verifyButton"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_background"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:text="Verify"
+        android:outlineSpotShadowColor="@color/lightblack"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:shadowColor="@color/black"
+        android:shadowDx="@integer/material_motion_duration_long_1"
+        android:backgroundTint="@color/black"/>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:progressBackgroundTint="@color/orange"
+        android:progressTint="@color/orange"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"/>
+
+</LinearLayout>

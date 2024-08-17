@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".DocumentUpload">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:src="@drawable/aadhar"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please upload you aadhhar card photo here"
+            android:textColor="@color/lightblack"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/uploadButton"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
+            android:outlineProvider="paddedBounds"
+            android:text="Upload"
+            android:textAllCaps="false"
+
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/aadharImage"
+        android:layout_width="150dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center" />
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:outlineProvider="paddedBounds"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        />
+
+</LinearLayout>

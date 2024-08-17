@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "520208249172",
+    "firebase_url": "https://raita-mitra-c585d-default-rtdb.firebaseio.com",
+    "project_id": "raita-mitra-c585d",
+    "storage_bucket": "raita-mitra-c585d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520208249172:android:9595dfbab626bc801b98c1",
+        "android_client_info": {
+          "package_name": "com.raitamitra.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520208249172-ah328cu2h1b2866b0j6ngji7ca20g30r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raitamitra.android",
+            "certificate_hash": "7f05841a3d37b770838662a60c30ecb018f7aa8d"
+          }
+        },
+        {
+          "client_id": "520208249172-faviflr21fc7imng71v2jn5lmi5v28u1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_Z0Y5DwUKbnPtt0pmfsKR2SGcyq22Dus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520208249172-faviflr21fc7imng71v2jn5lmi5v28u1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
