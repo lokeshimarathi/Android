@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".user.AboutJalNidhi">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginTop="10dp"
+      android:gravity="start">
+      <ImageView
+          android:layout_marginStart="10dp"
+          android:layout_width="30dp"
+          android:layout_height="50dp"
+          android:layout_gravity="center"
+          android:src="@drawable/jalnidhilogo"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Jal Nidhi"
+          android:layout_marginStart="10dp"
+          android:layout_gravity="center"
+          android:textColor="@color/black"
+          android:textSize="18sp"
+          android:textStyle="bold"/>
+  </LinearLayout>
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="150dp"
+              android:layout_margin="10dp"
+              android:src="@drawable/waterdrop"
+              android:elevation="20dp"
+              android:outlineSpotShadowColor="@color/black"
+              android:outlineAmbientShadowColor="@color/black"
+              android:layout_gravity="top"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textStyle="bold"
+              android:textColor="@color/lightblack"
+              android:textSize="18sp"
+              android:layout_marginHorizontal="10dp"
+              android:text="Welcome to JalNidhi, your comprehensive solution for sustainable water management. JalNidhi is more than just an app; it's a pioneering initiative designed to empower users with the tools needed to monitor and conserve our precious underground water resources. Seamlessly integrating cutting-edge technology with user-friendly features, JalNidhi allows you to contribute to a water-secure future for generations to come. Through our app, you can effortlessly collect and submit data on underground water levels, ensuring that crucial information reaches our AI and ML models hosted on Google Cloud. These advanced analytics provide valuable insights into groundwater health, enabling informed decision-making for users and administrators alike. Join us in the mission to preserve and protect our underground water sources, making a tangible impact on the environment and securing a sustainable water legacy for the future. Download JalNidhi today and become a steward of water conservation."/>
+
+      </LinearLayout>
+  </ScrollView>
+</LinearLayout>

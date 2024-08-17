@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".user.RechargeWell">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Recharge Well"
+                android:paddingBottom="20dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="What is Underground water?"
+                android:paddingBottom="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Underground water, also known as groundwater, refers to water that is stored beneath the Earth's surface in soil pores and in the fractures and crevices of rocks. This water accumulates as a result of precipitation, such as rain or snowmelt, that infiltrates the ground. Underground water is a crucial component of the Earth's hydrological cycle, playing a significant role in sustaining various ecosystems and meeting human water needs."
+                android:paddingBottom="5dp"
+                android:textColor="@color/derkGrey"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/videolink"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/whatIs"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="👉🏻 Click here to watch video!"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"/>
+
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="What is ground water recharge?"
+                android:paddingBottom="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Groundwater recharge or deep drainage or deep percolation is a hydrologic process, where water moves downward from surface water to groundwater. Recharge is the primary method through which water enters an aquifer."
+                android:paddingBottom="5dp"
+                android:textColor="@color/derkGrey"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/videolink"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/whatIsGroundWaterRecharge"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="👉🏻 Click here to watch video!"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"/>
+
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Importance of ground water recharge?"
+                android:paddingBottom="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ground water recharge is essential to sustain water supply and quality and also for agricultural sustainability. It helps in reducing saltwater intrusion,prevention of land subsidence and also in mitigating effects of climate change. It maintains ecological balance and has many economic benefits in the field of manufacturing, energy production, and tourism."
+                android:paddingBottom="5dp"
+                android:textColor="@color/derkGrey"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/videolink"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/importanceOfGroundWater"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="👉🏻 Click here to watch video!"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"/>
+
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="How to recharge ground water"
+                android:paddingBottom="5dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recharging groundwater involves enhancing the natural process by which water is added to the groundwater reservoir. Rainwater harvesting, through methods like rooftop collection and surface runoff capture, as well as the construction of artificial recharge structures such as percolation tanks and recharge wells, are effective ways to replenish groundwater levels. Additionally, managed aquifer recharge (MAR) techniques, including injection wells and spreading basins, contribute to sustaining groundwater resources."
+                android:paddingBottom="5dp"
+                android:textColor="@color/derkGrey"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/videolink"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/howToRecharge"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="👉🏻 Click here to watch video!"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1064188363891",
+    "project_id": "jal-nidhi",
+    "storage_bucket": "jal-nidhi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064188363891:android:5c1b2d7647306825fe1606",
+        "android_client_info": {
+          "package_name": "com.mitk.jalnidhi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_Y0oLPdUDa88hRwbnbYH4Ycxc7jTjaME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

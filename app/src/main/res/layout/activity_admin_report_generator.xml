@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".admin.AdminReportGenerator">
+
+
+    <LinearLayout
+        android:id="@+id/userSelectionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="50dp"
+        android:background="@drawable/account_type"
+        android:elevation="20dp"
+        android:orientation="vertical"
+
+        android:outlineAmbientShadowColor="@color/black">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ground water Report"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:id="@+id/checkMark"
+            android:layout_gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/checkmark"
+            android:layout_marginVertical="20dp"
+            android:elevation="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Longitude:"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/Longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="longitude"
+                android:textColor="@color/derkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latitude:"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/Latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="latitude"
+                android:textColor="@color/derkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+       android:orientation="horizontal">
+       <TextView
+
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Water Availability:"
+           android:textColor="@color/black"
+           android:textStyle="bold"
+           android:textSize="15sp"
+           android:layout_marginHorizontal="10dp"
+           android:layout_marginTop="10dp"/>
+       <TextView
+           android:id="@+id/waterAvailability"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Water Availability"
+           android:textColor="@color/derkGrey"
+           android:textStyle="bold"
+           android:textSize="15sp"
+           android:layout_marginTop="10dp"/>
+   </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Expected water discharge:"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/expectedWaterDischarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="discharge water"
+                android:textColor="@color/derkGrey"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expected level of water depth:"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/waterDepth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Water depth"
+                android:textColor="@color/derkGrey"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expected type of rock"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/expectedRock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water Availability"
+                android:textColor="@color/derkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expected Water:"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:id="@+id/expectedWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expected Water"
+                android:textColor="@color/derkGrey"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/finishButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:text="Finish"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>

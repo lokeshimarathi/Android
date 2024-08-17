@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/aquablue"
+    tools:context=".user.FindWell">
+
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+           <fragment
+               android:layout_width="match_parent"
+               android:layout_height="700dp"
+               android:id="@+id/google_map"
+               android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:layout_marginTop="20dp"
+               android:paddingHorizontal="5dp"
+               android:gravity="center">
+               <TextView
+
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+
+                   android:elevation="10dp"
+
+                   android:text="Longitude:"
+                   android:textColor="@color/black"
+                   android:textSize="15sp"
+                   android:textStyle="bold" />
+               <EditText
+                   android:id="@+id/longitude"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+
+                   android:background="@drawable/account_type"
+                   android:padding="5dp"
+                   android:text=""
+                   android:textColor="@color/black"
+                   android:textSize="15sp"
+                   android:textStyle="bold" />
+               <TextView
+
+                  android:layout_marginStart="5dp"
+                   android:elevation="10dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Latitude:"
+                   android:textStyle="bold"
+                   android:textSize="15sp"
+                   android:textColor="@color/black"
+                  />
+               <EditText
+                   android:id="@+id/latitude"
+                   android:padding="5dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:background="@drawable/account_type"
+                   android:text=""
+                   android:textStyle="bold"
+                   android:textSize="15sp"
+                   android:textColor="@color/black"
+                   />
+           </LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginVertical="10dp"
+               android:orientation="horizontal">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Place Name:"
+                   android:textColor="@color/black"
+                   android:textSize="15sp"
+                   android:layout_marginHorizontal="10dp"
+                   android:layout_gravity="center"
+                   android:textStyle="bold"/>
+               <EditText
+                   android:id="@+id/placeName"
+                   android:layout_width="200dp"
+                   android:layout_height="50dp"
+                   android:layout_gravity="center"
+                   android:textSize="15sp"
+                   android:textColor="@color/black"
+                   android:background="@drawable/account_type"/>
+           </LinearLayout>
+
+           <Button
+               android:id="@+id/shareButton"
+               android:layout_width="100dp"
+               android:layout_height="50dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:layout_marginBottom="10dp"
+               android:text="Share"
+               android:textColor="@color/white"
+               android:backgroundTint="@color/blue"/>
+       </LinearLayout>
+   </ScrollView>
+</LinearLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/aquablue"
+    tools:context=".user.UpdateProfile">
+    <LinearLayout
+        android:id="@+id/userSelectionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="0dp"
+        android:background="@drawable/account_type"
+        android:elevation="20dp"
+
+        android:orientation="vertical"
+        android:outlineAmbientShadowColor="@color/black">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Profile"
+            android:paddingBottom="20dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+
+            android:textStyle="bold" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/profilelogo"
+            android:elevation="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Name"
+                    android:textColor="@color/derkGrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:elevation="20dp"/>
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/input_background"
+                    android:maxLength="30"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/derkGrey" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:elevation="20dp"
+                    android:text="State"
+                    android:textColor="@color/derkGrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/state"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/input_background"
+                    android:maxLength="30"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/derkGrey" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="District"
+                    android:textColor="@color/derkGrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:elevation="20dp"/>
+
+                <EditText
+                    android:id="@+id/district"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/input_background"
+                    android:maxLength="30"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/derkGrey" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Taluk"
+                    android:textColor="@color/derkGrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:elevation="20dp"/>
+
+                <EditText
+                    android:id="@+id/taluk"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/input_background"
+                    android:maxLength="30"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/derkGrey" />
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/derkGrey" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Village"
+                    android:textColor="@color/derkGrey"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:elevation="20dp"/>
+
+                <EditText
+                    android:id="@+id/village"
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/input_background"
+                    android:maxLength="30"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/derkGrey" />
+
+                <LinearLayout
+                    android:layout_width="320dp"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@color/derkGrey" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/warnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Please enter all the above details!"
+            android:textColor="@color/orange"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible"
+            />
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Update"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/blue"
+            android:elevation="8dp"
+            android:outlineProvider="background"
+            />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:layout_marginBottom="20dp"
+
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aquablue"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".user.Broschure">
+
+    <LinearLayout
+        android:id="@+id/userSelectionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="50dp"
+        android:background="@drawable/account_type"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:outlineAmbientShadowColor="@color/black">
+        <ImageView
+            android:id="@+id/checkMark"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/checkmark"
+            android:elevation="20dp"/>
+
+        <TextView
+            android:id="@+id/submitText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your request has been successfully submitted!"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/approvalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please wait for the approval."
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/finishButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:text="Finish"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:textStyle="bold"/>
+        
+    </LinearLayout>
+</LinearLayout>
