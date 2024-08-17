@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "475587671683",
+    "firebase_url": "https://silicon-5ae49-default-rtdb.firebaseio.com",
+    "project_id": "silicon-5ae49",
+    "storage_bucket": "silicon-5ae49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475587671683:android:40fccc2fc6f74540d9cdb6",
+        "android_client_info": {
+          "package_name": "com.silicon.android.silicon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "475587671683-s7jo8b2j0ri8m9ku13nkfae344m131mi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.silicon.android.silicon",
+            "certificate_hash": "7f05841a3d37b770838662a60c30ecb018f7aa8d"
+          }
+        },
+        {
+          "client_id": "475587671683-qau6cvughbhp4vbq8rkus5g06sh9pnj4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAES-6AG4rBg97E5JYedPo9dr_IkLj4_u0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "475587671683-qau6cvughbhp4vbq8rkus5g06sh9pnj4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

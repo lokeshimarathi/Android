@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Silicon</string>
+    <string name="menu_message">Message</string>
+    <string name="menu_my_people">My people</string>
+    <string name="menu_my_people_request">Requests</string>
+    <string name="menu_call">Call</string>
+    <string name="menu_world">World</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_people">People</string>
+    <string name="menu_upload">Upload</string>
+    <string name="menu_conversation">Conversation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

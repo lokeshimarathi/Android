@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/first_fragment"
+        android:title="@string/menu_home"
+        android:contentDescription="@string/menu_home"
+        android:icon="@drawable/ic_home_white"/>
+
+    <item
+        android:id="@+id/second_fragment"
+        android:title="@string/menu_people"
+        android:contentDescription="@string/menu_people"
+        android:icon="@drawable/ic_my_people_white"/>
+
+    <item
+        android:id="@+id/third_fragment"
+        android:title="@string/menu_upload"
+        android:contentDescription="@string/menu_upload"
+        android:icon="@drawable/ic_upload_white"/>
+
+    <item
+        android:id="@+id/fourth_fragment"
+        android:title="@string/menu_conversation"
+        android:contentDescription="@string/menu_conversation"
+        android:icon="@drawable/ic_chat_white"/>
+
+</menu>

@@ -1,0 +1,163 @@
+package com.silicon.android.silicon.conversation;
+
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
+import android.widget.VideoView;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.silicon.android.silicon.R;
+import com.squareup.picasso.Picasso;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Objects;
+
+public class VideoGallery extends AppCompatActivity {
+    ActivityResultLauncher<String> mContent;
+    VideoView videoView;
+    EditText caption;
+    ImageView sendButton;
+    static String chatKey;
+    static String AuthUserId;
+    static String UsersAuthUserId;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        supportRequestWindowFeature(1);
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.white));
+        window.setNavigationBarColor(ContextCompat.getColor(this, R.color.white));
+        //for full screen activity and visible status bar icon
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        setContentView(R.layout.activity_video_gallery);
+        videoView = findViewById(R.id.video);
+        caption =  findViewById(R.id.caption);
+        sendButton = findViewById(R.id.sendButton);
+        chatKey= getIntent().getStringExtra("chatKey");
+        AuthUserId= getIntent().getStringExtra("AuthUserId");
+        UsersAuthUserId= getIntent().getStringExtra("UsersAuthUserId");
+        String From = getIntent().getStringExtra("From");
+        String Video = getIntent().getStringExtra("Video");
+
+        if(Objects.equals(From, "ChatAdapter")){
+            Uri videoUri = Uri.parse(Video);
+            videoView.setVideoURI(videoUri);
+            videoView.start();
+            caption.setVisibility(View.INVISIBLE);
+            sendButton.setVisibility(View.INVISIBLE);
+        }
+        else {
+            mContent = registerForActivityResult(new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
+                @Override
+                public void onActivityResult(Uri result) {
+                    // Handle the selected video here
+                    String video = result.toString();
+                    // Perform further processing with the video URI
+                    Uri videoUri = Uri.parse(video);
+                    videoView.setVideoURI(videoUri);
+                    videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            videoView.start();
+                        }
+                    });
+                    videoView.start();
+                    videoView.canPause();
+                    videoView.resume();
+                    String Caption= caption.getText().toString();
+                    sendButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            ProgressDialog pd = new ProgressDialog(VideoGallery.this);
+                            pd.setCancelable(true);
+                            pd.setTitle("Sending..");
+                            pd.show();
+
+                            FirebaseDatabase firebaseDatabase  = FirebaseDatabase.getInstance();
+                            DatabaseReference databaseReference = firebaseDatabase.getReference();
+                            FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
+                            StorageReference profileImagePath = firebaseStorage.getReference().child(chatKey + "/ media" ).child(videoUri.getLastPathSegment());
+                            profileImagePath.putFile(videoUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                    profileImagePath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri mediaDownloadUri) {
+                                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
+                                            SimpleDateFormat simpleTimeFormat = new SimpleDateFormat("hh:mm aa", Locale.getDefault());
+                                            String currentDate = simpleDateFormat.format(new Date());
+                                            String currentTime = simpleTimeFormat.format(new Date());
+                                            final String currentTimestamp = String.valueOf(System.currentTimeMillis()).substring(0, 10);
+                                            assert chatKey != null;
+                                            databaseReference.child("Chats").child(chatKey).child("user_1").setValue(AuthUserId);
+                                            databaseReference.child("Chats").child(chatKey).child("user_2").setValue(UsersAuthUserId);
+                                            databaseReference.child("Chats").child(chatKey).child("lastMessage").setValue("Video");
+                                            databaseReference.child("Chats").child(chatKey).child("lastMessageDate").setValue(currentDate);
+                                            databaseReference.child("Chats").child(chatKey).child("lastMessageTime").setValue(currentTime);
+                                            databaseReference.child("Chats").child(chatKey).child("lastMessageAuthUserId").setValue(AuthUserId);
+                                            databaseReference.child("Chats").child(chatKey).child("messages").child(currentTimestamp).child("msg").setValue("");
+                                            databaseReference.child("Chats").child(chatKey).child("messages").child(currentTimestamp).child("msgType").setValue("media");
+                                            databaseReference.child("Chats").child(chatKey).child("messages").child(currentTimestamp).child("mediaType").setValue("video");
+                                            databaseReference.child("Chats").child(chatKey).child("messages").child(currentTimestamp).child("caption").setValue(caption.getText().toString());
+                                            databaseReference.child("Chats").child(chatKey).child("messages").child(currentTimestamp).child("media").setValue(String.valueOf(mediaDownloadUri));
+                                            databaseReference.child("Chats").child(chatKey).child("messages").child(currentTimestamp).child("date").setValue(currentDate);
+                                            databaseReference.child("Chats").child(chatKey).child("messages").child(currentTimestamp).child("time").setValue(currentTime);
+                                            databaseReference.child("Chats").child(chatKey).child("messages").child(currentTimestamp).child("AuthUserId").setValue(AuthUserId);
+                                            databaseReference.child("Chats").child(chatKey).child("messages").child(currentTimestamp).child("condition").setValue("notRead");
+                                            databaseReference.child("Chats").child(chatKey).child("messages").child(currentTimestamp).child("deleteCondition").setValue("notDeleted");
+                                            Toast.makeText(VideoGallery.this, "Sent", Toast.LENGTH_SHORT).show();
+                                            pd.dismiss();
+                                            Intent intent = new Intent (getApplicationContext(), Chat.class);
+                                            startActivity(intent);
+                                        }
+                                    });
+                                }
+                            }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                                @Override
+                                public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+                                    float percent = (100 * snapshot.getBytesTransferred()) / snapshot.getTotalByteCount();
+                                    pd.setMessage("Please wait: " + (int) percent + "%");
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    pd.dismiss();
+                                    Toast.makeText(VideoGallery.this, "Error! Please try again", Toast.LENGTH_SHORT).show();
+                                }
+                            });                   }
+                    });
+                    // ...
+                }
+            });
+
+            mContent.launch("video/*");
+        }
+    }
+
+}

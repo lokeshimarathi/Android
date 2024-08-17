@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/oppoLayout"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp">
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/usersProfileImage"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:layout_gravity="center"
+             android:src="@drawable/faceemoji"/>
+
+     </LinearLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/oppoMessage"
+                android:padding="5dp"
+                android:background="@drawable/chat_recieve_adapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightblack"
+                android:layout_marginStart="25dp"
+                android:layout_gravity="start"
+                android:text="              This is opponent message"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/oppoCardView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                app:cardElevation="0dp"
+                android:visibility="gone">
+
+                <VideoView
+                    android:id="@+id/oppoVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/oppoImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:riv_corner_radius="15dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="gone"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/oppoCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Caption"
+                android:textColor="@color/lightblack"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/oppoMsgTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="10sp"
+                android:layout_marginStart="30dp"
+                android:layout_gravity="start"
+                android:textColor="@color/lightblack"
+                android:text="23-03-2023  07:08 PM"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+            android:id="@+id/myLayout"
+            android:layout_marginEnd="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_gravity="end">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/faceemoji"
+                android:layout_marginEnd="10dp"/>
+
+        </LinearLayout>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/myMessage"
+                android:padding="5dp"
+                android:background="@drawable/chat_send_adapter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textColor="@color/white"
+                android:layout_marginEnd="25dp"
+                android:text="              This is my message"
+                android:visibility="gone"
+
+
+                android:textStyle="bold"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="5dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                app:cardElevation="0dp">
+
+                <VideoView
+                    android:id="@+id/video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:riv_corner_radius="15dp"
+                    android:layout_gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="gone"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/Caption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Caption"
+                android:gravity="end"
+                android:textColor="@color/lightblack"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:gravity="end"
+              android:layout_gravity="end"
+              android:layout_marginEnd="30dp">
+              <TextView
+                  android:layout_gravity="center"
+                  android:id="@+id/myMsgTime"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="10sp"
+                    android:layout_marginStart="50dp"
+                  android:textColor="@color/lightblack"
+                  android:text="23-03-2023  07:08 PM"/>
+              <ImageView
+                  android:layout_gravity="center"
+                  android:id="@+id/condition"
+                  android:layout_marginStart="10dp"
+                  android:layout_width="10dp"
+                  android:layout_height="10dp"
+                  android:src="@drawable/ic_check_unfill" />
+          </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

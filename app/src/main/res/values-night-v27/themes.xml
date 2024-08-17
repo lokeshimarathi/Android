@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.Silicon" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Customize your dark theme here. -->
+        <!-- white status bar icon for dark mode. -->
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">?attr/colorOnSecondary</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>
